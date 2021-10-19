@@ -1,0 +1,21 @@
+from IPython.display import clear_output
+stop = False
+a = 0
+b = 0
+c = 0
+resul = 0
+resp = int(input("Digite quanto tempo deseja contar: "))
+while a <= resp:
+  for i in range(0, 401):
+    if i == 400:
+      print(f"{c}:", end = "")
+      print(f"{b}:", end = "")
+      print(a)
+      a = a + 1
+      if a == 60:
+        b = b + 1
+        a = 0
+      if b == 60:
+        c = c + 1
+        b = 0
+    clear_output(wait=True)
